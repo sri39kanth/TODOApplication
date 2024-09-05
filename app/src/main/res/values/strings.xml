@@ -2,4 +2,8 @@
     <string name="app_name">TODOApplication</string>
     <string name="all_the_todo_items_are_listed_here">All the Todo items are listed here</string>
     <string name="add">ADD</string>
+    <string name="add_the_title_for_todo_items">Add the title for todo items</string>
+    <string name="add_the_content_of_the_items">Add the content of the items</string>
+    <string name="close">Close</string>
+    <string name="save">Save</string>
 </resources>

@@ -15,8 +15,10 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.todoapplication.R
 import com.example.todoapplication.screens.todolist.ToDoClickEvent
 import com.example.todoapplication.screens.todolist.ToDoState
 import com.example.todoapplication.ui.theme.TODOApplicationTheme
@@ -35,7 +37,7 @@ fun ToDoAddItemComposable(
                     onEvent(ToDoClickEvent.SaveHeader(it))
                 },
                 placeholder = {
-                    Text(text = "Add the title for todo items")
+                    Text(text = stringResource(R.string.add_the_title_for_todo_items))
                 },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -46,7 +48,7 @@ fun ToDoAddItemComposable(
                     onEvent(ToDoClickEvent.SaveContent(it))
                 },
                 placeholder = {
-                    Text(text = "Add the content of the items")
+                    Text(text = stringResource(R.string.add_the_content_of_the_items))
                 },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -67,12 +69,12 @@ fun SaveDeleteComposable(onEvent: (ToDoClickEvent) -> Unit){
     ) {
         Box(modifier = Modifier.weight(1f)) {
             IconButton(onClick = { onEvent(ToDoClickEvent.HideAddToDoItem) }) {
-                Icon(imageVector = Icons.Default.Close, contentDescription = "Close")
+                Icon(imageVector = Icons.Default.Close, contentDescription = stringResource(R.string.close))
             }
         }
         Box {
             IconButton(onClick = { onEvent(ToDoClickEvent.SaveToDoItem) }) {
-                Icon(imageVector = Icons.Default.Done, contentDescription = "Save")
+                Icon(imageVector = Icons.Default.Done, contentDescription = stringResource(R.string.save))
             }
         }
 
