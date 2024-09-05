@@ -40,7 +40,7 @@ fun ToDoItemsListComposable(
         Scaffold(
             floatingActionButton = {
                 FloatingActionButton(onClick = { onEvent(ToDoClickEvent.ShowAddToDoItem) }) {
-                    Icon(imageVector = Icons.Default.Add, contentDescription = "ADD")
+                    Icon(imageVector = Icons.Default.Add, contentDescription = stringResource(R.string.add))
                 }
             },
             modifier = Modifier.fillMaxSize()
