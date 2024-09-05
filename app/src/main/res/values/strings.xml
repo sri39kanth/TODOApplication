@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TODOApplication</string>
+    <string name="all_the_todo_items_are_listed_here">All the Todo items are listed here</string>
 </resources>

@@ -79,6 +79,10 @@ constructor(
                 viewModelScope.launch(dispatcherProvider.main()) {
                     dao.insertItem(ToDoContentData(header = header, content = content))
                 }
+                _todoSate.update {
+                    it.copy(isAdding = false,  header = "", content = "")
+                }
+
             }
             ToDoClickEvent.ShowAddToDoItem -> {
                 _todoSate.update {
